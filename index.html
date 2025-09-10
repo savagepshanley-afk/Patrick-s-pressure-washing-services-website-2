@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrick Shanley Power Washing</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #fff;
+            background-color: #000;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* Navbar */
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: #111;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            padding: 8px 12px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #1E90FF;
+            border-radius: 5px;
+        }
+
+        /* Header */
+        header {
+            background: url('https://images.unsplash.com/photo-1599058917216-ccfef1f32087?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 150px 20px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            background: #ff6600;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #e65c00;
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 20px;
+            text-align: center;
+            background: #111;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        p, li {
+            color: #fff;
+            font-size: 1.1rem;
+        }
+
+        ul {
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Divider Line */
+        .divider {
+            border-bottom: 1px solid #555;
+            margin: 30px 0;
+        }
+
+        /* Calendar Section */
+        .calendar-form {
+            max-width: 500px;
+            margin: 20px auto;
+            text-align: left;
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: none;
+            font-size: 1rem;
+        }
+
+        input[type="date"], select {
+            background: #fff;
+            color: #000;
+        }
+
+        button {
+            background: #ff6600;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #e65c00;
+        }
+
+        /* Footer */
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        a {
+            color: #1E90FF;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#prices">Prices</a>
+        <a href="#about">About Us</a>
+        <a href="#guarantee">Service Guarantee</a>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="container">
+            <h1>Patrick Shanley Power Washing</h1>
+            <p>Professional Residential & Commercial Power Washing Services</p>
+            <button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get a Free Quote</button>
+        </div>
+    </section>
+
+    <!-- Prices Section -->
+    <section id="prices">
+        <div class="container">
+            <h2>Prices & Availability</h2>
+            
+            <h3>Driveway Cleaning</h3>
+            <p>$0.025 per sq. ft. (Example: 1,000 sq. ft. driveway = $25)</p>
+            <div class="divider"></div>
+
+            <h3>House Exterior</h3>
+            <p>$0.03 per sq. ft. Includes siding, brick, or stucco surfaces.</p>
+            <div class="divider"></div>
+
+            <h3>Deck & Patio</h3>
+            <p>$0.02 per sq. ft. Covers wood, composite, or concrete surfaces.</p>
+            <div class="divider"></div>
+
+            <h3>Commercial Services</h3>
+            <p>$0.03 - $0.05 per sq. ft. Contact for a custom quote.</p>
+            <div class="divider"></div>
+
+            <h3>Available Hours</h3>
+            <p>Weekends: Cheapest pricing (no added fee)<br>
+            After school (Monday-Thursday): Small added fee<br>
+            Friday afternoon: Slightly more expensive</p>
+            <p>Note: I am a high school student balancing schoolwork and business, so scheduling depends on availability.</p>
+
+            <!-- Interactive Calendar -->
+            <div class="calendar-form">
+                <h3>Check Availability</h3>
+                <form onsubmit="redirectToContact(event)">
+                    <label for="date">Choose a Date:</label>
+                    <input type="date" id="date" name="date" required>
+
+                    <label for="time">Choose a Time Slot:</label>
+                    <select id="time" name="time" required>
+                        <option value="">-- Select a time --</option>
+                        <option value="Mon-Thu">After School (Mon-Thu, 4pm–7pm)</option>
+                        <option value="Friday">Friday Afternoon (3pm–7pm)</option>
+                        <option value="WeekendMorning">Weekend Morning (8am–12pm)</option>
+                        <option value="WeekendAfternoon">Weekend Afternoon (12pm–6pm)</option>
+                    </select>
+
+                    <button type="submit">Request This Time</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Hi, I’m Patrick Shanley, a single high schooler looking for work. I take pride in providing high-quality power washing services. You can also check out my <a href="https://www.facebook.com/PatrickShanley" target="_blank">Facebook Page</a>.</p>
+            <ul>
+                <li>The first priority is to be respectful, timely, and responsive throughout the process.</li>
+                <li>Surrounding landscaping, siding, and other areas will be protected to the best of our ability.</li>
+                <li>I only use safe pressure levels and detergents suitable for the surface being cleaned.</li>
+                <li>I am not responsible for pre-existing, loose paint, cracked surfaces, or stains that cannot be removed with normal washing.</li>
+                <li>Some older surfaces may show wear or discoloration after cleaning; we will advise if we see potential risks.</li>
+                <li>All estimates are free of charge at all times.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Service Guarantee Section -->
+    <section id="guarantee">
+        <div class="container">
+            <h2>Service Guarantee</h2>
+            <p>We guarantee satisfaction with every service. If you’re not happy, we’ll return and fix it at no extra cost. Our mission is to make your property look spotless while maintaining the highest professionalism.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>Phone: <a href="tel:2815416598">281-541-6598</a></p>
+            <p>Email: <a href="mailto:savagep.shanley@gmail.com">savagep.shanley@gmail.com</a></p>
+            <p>Ready to make your property shine? Reach out for a free estimate today!</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Patrick Shanley Power Washing. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function redirectToContact(event) {
+            event.preventDefault();
+            alert("Thank you! Please contact Patrick directly to confirm your booking.");
+            document.getElementById('contact').scrollIntoView({behavior: 'smooth'});
+        }
+    </script>
+
+</body>
+</html>
